@@ -3,16 +3,12 @@
 var isPalindrome = function (x) {
 	let stringX = x.toString();
 	let splitX = stringX.split('');
+	let newXArr = [];
 
-	for (let i = 0; i < splitX.length; i++) {
-		console.log(splitX);
-
-		splitX.pop();
+	for (let i = splitX.length; i >= 0; i--) {
+		if (splitX[i] !== undefined) {
+			newXArr.push(splitX[i]);
+		}
 	}
-
-	// console.log(popX)
-	// console.log(sliceX)
-	// if(x < 0){
-	//     return false;
-	// } else if()
+	console.log(newXArr);
 };
