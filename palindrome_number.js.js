@@ -5,10 +5,20 @@ var isPalindrome = function (x) {
 	let splitX = stringX.split('');
 	let newXArr = [];
 
-	for (let i = splitX.length; i >= 0; i--) {
-		if (splitX[i] !== undefined) {
-			newXArr.push(splitX[i]);
+	  for (let i = splitX.length; i >= 0; i--) {
+			if (splitX[i] !== undefined) {
+				newXArr.push(splitX[i]);
+			}
 		}
-	}
-	console.log(newXArr);
+		let joinX = newXArr.join('');
+		let backwardsX = joinX;
+		console.log(
+			`x: ${x}, backwardsX: ${backwardsX}..... ${typeof x}, ${typeof backwardsX}`
+		);
+
+		if (backwardsX == x) {
+			return 'true';
+		} else {
+			return 'false';
+		}
 };
